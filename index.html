@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo-name">
+                <h1>Test Pomodoro</h1>
+            </div>
+            <div class="language">
+                <button class="button button-settings">Settings</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- <iframe class="bg-video" src="https://www.youtube.com/embed/HQwLPhE2zys?si=bzVca1dYSczAGqe2&autoplay=1&mute=0&controls=0&loop=1&playlist=HQwLPhE2zys" frameborder="0" allowfullscreen allow="autoplay"></iframe> -->
+        <video autoplay muted loop id="bg-video">
+            <source src="./Assets/Videos/coffee.mp4" type="video/mp4">
+        </video>
+        <dialog class="dialog-layer">
+            <div class="settings-bg">
+                <p>Choose your background</p>
+                <div class="bg-images-preview">
+                    <img src="./Assets/Images/coffee.png" alt="Coffee image">
+                    <img src="./Assets/Images/coffeeshop.png" alt="Coffee Shop image">
+                    <img src="./Assets/Images/cozy.png" alt="Cozy image">
+                    <img src="./Assets/Images/evening.png" alt="Evening image">
+                    <img src="./Assets/Images/furry.png" alt="Furry image">
+                    <img src="./Assets/Images/sailor.png" alt="Sailor image">
+                </div>
+            </div>
+            <div class="dialog-timer">
+                
+            </div>
+            <button class="button button-save">Save settings</button>
+        </dialog>
+        <section class="counter">
+            <div class="counter-number">
+                <label for="minutes" class="minutes">25</label>:<label for="seconds" class="seconds">00</label>
+            </div>
+            <div class="buttons">
+                <button class="button button-start">
+                    <p>
+                        Start pomodoro
+                    </p>
+                </button>
+                <button class="button button-stop" disabled>
+                    <p>
+                        Stop pomodoro
+                    </p>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- <footer class="footer">
+        footer content
+    </footer> -->
+    <script type="module" src="./src/scripts/index.js"></script>
+</body>
+</html>
