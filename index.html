@@ -19,28 +19,55 @@
     </header>
 
     <main class="main">
-        <!-- <iframe class="bg-video" src="https://www.youtube.com/embed/HQwLPhE2zys?si=bzVca1dYSczAGqe2&autoplay=1&mute=0&controls=0&loop=1&playlist=HQwLPhE2zys" frameborder="0" allowfullscreen allow="autoplay"></iframe> -->
         <video autoplay muted loop id="bg-video">
             <source src="./Assets/Videos/coffee.mp4" type="video/mp4">
         </video>
         <dialog class="dialog-layer">
-            <div class="settings-bg">
-                <p>Choose your background</p>
-                <div class="bg-images-preview">
-                    <img src="./Assets/Images/coffee.png" alt="Coffee image">
-                    <img src="./Assets/Images/coffeeshop.png" alt="Coffee Shop image">
-                    <img src="./Assets/Images/cozy.png" alt="Cozy image">
-                    <img src="./Assets/Images/evening.png" alt="Evening image">
-                    <img src="./Assets/Images/furry.png" alt="Furry image">
-                    <img src="./Assets/Images/sailor.png" alt="Sailor image">
+            <div class="dialog-content">
+                <div class="settings-bg">
+                    <p>Choose your background</p>
+                    <div class="bg-images-preview">
+                        <img id="coffee" src="./Assets/Images/coffee.png" alt="Coffee image">
+                        <img id="coffeeshop" src="./Assets/Images/coffeeshop.png" alt="Coffee Shop image">
+                        <img id="cozy" src="./Assets/Images/cozy.png" alt="Cozy image">
+                        <img id="evening" src="./Assets/Images/evening.png" alt="Evening image">
+                        <img id="furry" src="./Assets/Images/furry.png" alt="Furry image">
+                        <img id="sailor" src="./Assets/Images/sailor.png" alt="Sailor image">
+                    </div>
                 </div>
+                <div class="choose-time">
+                    <p>Choose time settings</p>
+                    <fieldset class="dropdown-content">
+                        <div>
+                            <input class="radio-button" type="radio" id="normal" name="timer" value="normal" checked>
+                            <label for="normal">Normal mode - 25:00</label>
+                        </div>
+                        <div>
+                            <input class="radio-button" type="radio" id="hard" name="timer" value="hard">
+                            <label for="hard">Hard mode - 35:00</label>
+                        </div>
+                        <div>
+                            <input class="radio-button" type="radio" id="extreme" name="timer" value="extreme">
+                            <label for="extreme">Extreme mode - 45:00</label>
+                        </div>
+                        <div>
+                            <input class="radio-button" type="radio" id="impossible" name="timer" value="impossible">
+                            <label for="impossible">Need to finish by tomorrow mode - 55:00</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <button class="button button-save">Save settings</button>
             </div>
-            <div class="dialog-timer">
-                
-            </div>
-            <button class="button button-save">Save settings</button>
         </dialog>
         <section class="counter">
+            <div class="switch">
+                <input type="radio" id="work-mode-time" name="mode-time" value="active" checked>
+                <label class="work-mode-time" for="work-mode-time">Work</label>
+                <input type="radio" id="rest-mode-time" name="mode-time" value="rest">
+                <label class="rest-mode-time" for="rest-mode-time">Rest</label>
+                <input type="radio" id="long-rest-mode-time" name="mode-time" value="rest_long">
+                <label class="long-rest-mode-time" for="long-rest-mode-time">Long Rest</label>
+            </div>
             <div class="counter-number">
                 <label for="minutes" class="minutes">25</label>:<label for="seconds" class="seconds">00</label>
             </div>
@@ -58,9 +85,7 @@
             </div>
         </section>
     </main>
-    <!-- <footer class="footer">
-        footer content
-    </footer> -->
-    <script type="module" src="./src/scripts/index.js"></script>
+ 
+    <script type="module" src="./src/index.js"></script>
 </body>
 </html>

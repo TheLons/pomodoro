@@ -55,6 +55,7 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .counter-number {
@@ -70,10 +71,18 @@ h1 {
     max-width: 800px;
 }
 
+.dialog-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-y: auto;
+}
+
 .settings-bg {
     height: auto;
     width: 100%;
-
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -101,8 +110,61 @@ h1 {
     transition: ease 0.3s;
 }
 
+.button-save {
+    width: 100px;
+    height: 100px;
+}
+
+.choose-time {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 button:hover {
     opacity: 100%;
+}
+
+.switch {
+    font-size: 18px;
+    position: relative;
+    width: auto;
+    height: 2em;
+    user-select: none;
+    background-color: yellowgreen;
+    display: flex;
+}
+
+.switch > input {
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.switch > .rest-mode-time, 
+.switch > .work-mode-time,
+.switch > .long-rest-mode-time {
+    display: block;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #363b42;
+    padding: 0 10px;
+}
+
+.switch > input[type="radio"]:checked + .work-mode-time, 
+.switch > input[type="radio"]:checked + .rest-mode-time,
+.switch > input[type="radio"]:checked + .long-rest-mode-time {
+    background-color: rgb(93, 187, 56);
 }
 
 #bg-video {
