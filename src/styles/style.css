@@ -63,7 +63,7 @@ h1 {
 }
 
 .dialog-layer {
-    height: 70%;
+    height: auto;
     width: auto;
     min-height: 400px;
     max-height: 800px;
@@ -112,7 +112,7 @@ h1 {
 
 .button-save {
     width: 100px;
-    height: 100px;
+    height: 30px;
 }
 
 .choose-time {
@@ -128,6 +128,7 @@ h1 {
 
 button:hover {
     opacity: 100%;
+    cursor: pointer;
 }
 
 .switch {
@@ -138,6 +139,7 @@ button:hover {
     user-select: none;
     background-color: yellowgreen;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .switch > input {
@@ -165,6 +167,50 @@ button:hover {
 .switch > input[type="radio"]:checked + .rest-mode-time,
 .switch > input[type="radio"]:checked + .long-rest-mode-time {
     background-color: rgb(93, 187, 56);
+}
+
+.animation-work, .animation-rest {
+    position: relative;
+    display: none;
+    height: auto;
+    width: 300px;
+    flex-direction: column;
+}
+
+.animated_cat, .animated_animal_sleep {
+    position: relative;
+    width: 200px;
+    padding-top: 60px;
+}
+
+.animated_text_work_container, .animated_text_sleep_container {
+    position: relative;
+    width: 300px;
+}
+
+.animated_text_work, .animated_text_sleep {
+    position: absolute;
+    width: 200px;
+    right: 0;
+}
+
+#pomodoroProgress {
+    display: none;
+    width: 300px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+#pomodoroBar {
+    width: 1%;  /* Initial width */
+    height: 30px;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
 }
 
 #bg-video {

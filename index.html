@@ -60,6 +60,18 @@
             </div>
         </dialog>
         <section class="counter">
+            <div class="animation-work">
+                <div class="animated_text_work_container">
+                    <img class="animated_text_work" src="./Assets/Gifs/pixel-speech-bubble-work.gif" alt="Work dialog box">
+                </div>
+                <img class="animated_cat" src="./Assets/Gifs/animal.webp" alt="cat gif">
+            </div>
+            <div class="animation-rest">
+                <div class="animated_text_sleep_container">
+                    <img class="animated_text_sleep" src="./Assets/Gifs/pixel-speech-bubble-rest.gif" alt="Rest dialog box">
+                </div>
+                <img class="animated_animal_sleep" src="./Assets/Gifs/animal_sleep.webp" alt="sleeping animal gif">
+            </div>
             <div class="switch">
                 <input type="radio" id="work-mode-time" name="mode-time" value="active" checked>
                 <label class="work-mode-time" for="work-mode-time">Work</label>
@@ -70,6 +82,9 @@
             </div>
             <div class="counter-number">
                 <label for="minutes" class="minutes">25</label>:<label for="seconds" class="seconds">00</label>
+            </div>
+            <div id="pomodoroProgress">
+                <div id="pomodoroBar">1%</div>
             </div>
             <div class="buttons">
                 <button class="button button-start">
@@ -84,6 +99,7 @@
                 </button>
             </div>
         </section>
+
     </main>
  
     <script type="module" src="./src/index.js"></script>
